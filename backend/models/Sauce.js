@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+// Importation de mongoose
+
 
 const sauceSchema = mongoose.Schema({
   title: { type: String, required: true },
@@ -7,6 +9,8 @@ const sauceSchema = mongoose.Schema({
   userId: { type: String, required: true },
   price: { type: Number, required: true },
 });
+
+// Définition du schéma pour mongoose
 
 // ous créons un schéma de données qui contient les champs souhaités pour chaque sauce,
 //  indique leur type ainsi que leur caractère (obligatoire ou non). Pour cela,

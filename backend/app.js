@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
+// Importation des packages de Node.js
 
 const app = express();
 
