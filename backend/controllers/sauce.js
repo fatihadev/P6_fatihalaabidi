@@ -1,4 +1,5 @@
-// IMPORTATION MODELS
+
+
 const Sauce = require('../models/Sauce');
 
 const fs = require('fs');// Permet de gérer les fichiers stockés
@@ -144,4 +145,3 @@ exports.likeSauce = (req, res, next) => {
     })
     .catch((error) => res.status(404).json(error));
 };
-

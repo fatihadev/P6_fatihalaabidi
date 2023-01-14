@@ -1,21 +1,19 @@
-const express = require('express');
-
+const express = require("express");
 const router = express.Router();
-//  au lieu de faire app.get ou pots on fait router.GET OU POST
+// IMPORTATION MIDDLEWARES
+const auth = require("../middleware/auth");
+const multer = require("../middleware/multer-config");
 
-const auth = require('../middlewear/auth');
-const sauceCtrl = require('../controllers/sauce');
-const multer = require('../middlewear/multer-config');
-// Définition des chemins sauces , multer et auth qui sert au router
+// IMPORTATION CONTROLLERS
+const saucesCtrl = require ('../controllers/sauce');
 
+// ROUTES
+router.get('/',auth,saucesCtrl.allSauces);
+router.get('/:id',auth,saucesCtrl.oneSauce);
+router.post('/',auth,multer,saucesCtrl.createSauce);
+router.post('/:id/like',auth, saucesCtrl.likeSauce);
+router.put('/:id',auth,multer,saucesCtrl.modifySauce);
+router.delete('/:id',auth,saucesCtrl.deleteSauce);
 
-// routes 
-router.get('/',auth,sauceCtrl.allSauces)
-router.get('/:id',auth,sauceCtrl.oneSauce)
-router.post('/',auth,multer,sauceCtrl.createSauce)
-router.post('/:id/like',auth,multer,sauceCtrl.createSauce)
-router.put('/:id',auth,sauceCtrl.modifySauce)
-router.delete('/:id',auth,sauceCtrl.deleteSauce)
-// Chaque router a son CRUD (Get, Post, Put, Delete) avec le chemin
 
 module.exports = router;
