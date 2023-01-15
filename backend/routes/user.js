@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 // IMPORTATION CONTROLLERS
+
 const userCtrl = require('../controllers/user');
 
 // ROUTE

@@ -22,7 +22,7 @@ mongoose.connect(`mongodb+srv://sitepiment:saucepiment@cluster0.ajtncbv.mongodb.
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
-
+  
  
 
 //Erreur cors
