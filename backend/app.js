@@ -12,6 +12,8 @@ require('dotenv').config();
 
 app.use(cors());
 
+// Importation des packages de Node.js
+
  // HELMET Protège l'app en paramétrant des Headers (notamment contre les failles XSS)
  app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
