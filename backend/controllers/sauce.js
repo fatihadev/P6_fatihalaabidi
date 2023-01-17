@@ -2,7 +2,7 @@
 
 const Sauce = require('../models/Sauce');
 
-const fs = require('fs');// Permet de gérer les fichiers stockés
+const fs = require('fs');// file systeme Permet de gérer les fichiers stockés
 const { error } = require('console');
 
 // MIDDLEWARE POUR AFFICHER TOUTES LES SAUCES
